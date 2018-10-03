@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Live2D Sample</title>
+            <!-- BootstrapのCSS読み込み -->
+             <link href="css/bootstrap.min.css" rel="stylesheet">
+            <style>
+                body {
+                    -webkit-app-region: drag; /* ドラッグ可能に */
+                    -webkit-user-select: none; /* ドラッグはテキスト選択と競合するので禁止 */
+                }
+            </style>
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=4.0">
+        </meta>
+    </head>
+
+    <!-- bootstrapで効いてしまう白背景を、ココでクリアに戻す -->
+    <body onload="Simple()" style="background-color: rgba(0,0,0,0);">
+
+        <div class="container">
+            <div class="row" style="display: block; margin-left: 38px;">
+                <button id="haru" type="button" class="btn btn-primary" onclick="setTextures('haru')">ハル</button>
+                <button id="miku" type="button" class="btn btn-primary"
+                onclick="setTextures('miku')">初音ミク</button>
+                <button id="Epsilon" type="button" class="btn btn-primary" onclick="setTextures('Epsilon')">イプシロン</button>
+                <button id="chitose" type="button" class="btn btn-primary" onclick="setTextures('chitose')">ちとせ</button>
+            </div>
+            <div class="row">
+                <canvas id="glcanvas" width = "700px" height="700px"></canvas>
+            </div>
+        </div>
+        <!-- /container -->
+        
+        <!-- Live2D Library -->
+        <script src="../../lib/live2d.min.js"></script>
+        
+        <!-- Live2D Library For Motion -->
+        <script src="../../framework/Live2DFramework.js"></script>
+        
+        <!-- User's Script -->
+        <script src="./js/simple.js"></script>
+        <!-- BootstrapのJS読み込み -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
